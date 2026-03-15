@@ -517,13 +517,13 @@ body{
 
 /* Slide cover (slide 1) */
 .slide-cover{
-  background:linear-gradient(135deg, #080b10 0%, #0c0f16 40%, #111520 100%);
+  background:linear-gradient(135deg, #141926 0%, #1a2035 40%, #1f2640 100%);
   padding:40px 32px;text-align:center;position:relative;overflow:hidden;
   min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;
 }
 .slide-cover::before{
   content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 70% 50% at 50% 100%,rgba(224,32,32,.08) 0%,transparent 60%);
+  background:radial-gradient(ellipse 70% 50% at 50% 100%,rgba(224,32,32,.1) 0%,transparent 60%);
   pointer-events:none;
 }
 .cover-tag{
@@ -534,14 +534,15 @@ body{
 .cover-title{
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(26px,4vw,42px);font-weight:700;
-  color:var(--text);margin-bottom:8px;
+  color:#ffffff;margin-bottom:8px;
+  text-shadow:0 2px 12px rgba(0,0,0,.5);
 }
 .cover-title em{color:var(--red);font-style:italic;}
-.cover-sub{font-size:13px;color:var(--text-mid);margin-bottom:20px;font-weight:300;}
+.cover-sub{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:20px;font-weight:300;}
 .cover-pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
 .cover-pill{
-  background:var(--surface2);border:1px solid var(--border);
-  border-radius:20px;padding:5px 14px;font-size:11px;color:var(--text-mid);
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  border-radius:20px;padding:5px 14px;font-size:11px;color:rgba(255,255,255,.85);
   font-family:'IBM Plex Mono',monospace;
 }
 
