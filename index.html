@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CGI COE — Oracle Knowledge Base</title>
+<title>CGI COE Oracle Playbook</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 <style>
 /* =====================================================
-   CGI COE Oracle Knowledge Base
+   CGI COE Oracle Playbook
    Design: "Terminal Precision" — dark code-first UI
    IBM Plex Mono for code, IBM Plex Sans for UI
    CGI red accents on deep navy-black
@@ -591,6 +591,40 @@ body{
   font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text-dim);
 }
 
+/* ── SITE FOOTER ── */
+.site-footer{
+  background:var(--surface);border-top:2px solid var(--red);
+  padding:26px 28px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:16px;
+  position:relative;
+}
+.site-footer::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,#e02020,#ff4040,#e02020);opacity:.7;
+}
+.site-footer-brand{
+  font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;
+  color:var(--red);letter-spacing:2px;text-transform:uppercase;
+}
+.site-footer-links{display:flex;align-items:center;flex-wrap:wrap;gap:8px;}
+.site-footer-link{
+  display:inline-flex;align-items:center;gap:5px;
+  font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;
+  letter-spacing:1.2px;text-transform:uppercase;text-decoration:none;
+  color:var(--text-mid);background:var(--surface2);
+  border:1px solid var(--border2);padding:6px 14px;border-radius:20px;
+  transition:all .18s;
+}
+.site-footer-link:hover{color:var(--text);background:var(--surface3);border-color:var(--red);transform:translateY(-1px);}
+.site-footer-link svg{opacity:.55;flex-shrink:0;}
+.site-footer-link:hover svg{opacity:1;}
+.site-footer-copy{
+  font-family:'IBM Plex Mono',monospace;font-size:9px;
+  color:var(--text-dim);letter-spacing:.8px;
+}
+@media(max-width:640px){.site-footer{flex-direction:column;align-items:flex-start;gap:14px;padding:20px 16px;}}
+
 /* ── DOC TABS ── */
 .doc-tabs-bar{
   background:var(--bg2);
@@ -968,10 +1002,11 @@ body{
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <span class="topbar-left">CGI · MFG Center of Excellence</span>
+  <span class="topbar-left">CGI &nbsp;|&nbsp; Oracle COE Playbook</span>
   <div class="topbar-right">
-    <span class="topbar-link">v1.0 · March 2026</span>
-    <span class="topbar-link">Internal Use Only</span>
+    <a href="https://cgicoerepo.vercel.app/" target="_blank" class="topbar-link">CGI Oracle Stack</a>
+    <a href="https://cgicoeexam.vercel.app/" target="_blank" class="topbar-link">CGI Oracle Cert Lab</a>
+    <a href="https://cgicoesql.vercel.app/" target="_blank" class="topbar-link">CGI Oracle SQL Arsenal</a>
   </div>
 </div>
 
@@ -987,8 +1022,8 @@ body{
     </div>
     <div class="brand-div"></div>
     <div>
-      <span class="brand-name">Oracle Knowledge Base</span>
-      <span class="brand-sub">COE · 3 Knowledge Guides</span>
+      <span class="brand-name">CGI COE Oracle Playbook</span>
+      <span class="brand-sub">COE · 4 Knowledge Guides</span>
     </div>
   </a>
 
@@ -1008,7 +1043,7 @@ body{
 <!-- HERO -->
 <section class="hero">
   <div class="hero-eyebrow"><span class="hero-dot"></span> CGI MFG Center of Excellence</div>
-  <h1>Oracle <em>Knowledge</em> Base</h1>
+  <h1>CGI COE <em>Oracle</em> Playbook</h1>
   <p class="hero-sub">Complete reference library for Oracle EBS tooling — covering AI-powered Ask EBS queries, WebADI Excel bulk operations, and the full Procure-to-Pay cycle across Manufacturing, Finance, Procurement, and Supply Chain.</p>
   <div class="hero-meta">
     <span class="hero-meta-item"><span class="hero-meta-dot"></span>4 Guides · 76 Sections</span>
@@ -1240,7 +1275,6 @@ body{
     <div class="toc-item" data-doc="p2p" data-slide="p21" onclick="goToSlide('p2p','p21')"><span class="toc-num">21</span><span class="toc-title">Best Practices & Controls</span></div>
     <div class="toc-item" data-doc="p2p" data-slide="p22" onclick="goToSlide('p2p','p22')"><span class="toc-num">22</span><span class="toc-title">Roles, Responsibilities & Support</span></div>
     </div><!-- /toc-doc p2p -->
-  </aside>
   </aside>
 
   <!-- MAIN SLIDES -->
@@ -1888,7 +1922,7 @@ body{
               <div class="blue-block-body">
                 <div class="do-item">Build a shared 'Team Favorites' library of standard queries</div>
                 <div class="do-item">Run weekly 'Ask EBS Office Hours' (30 min)</div>
-                <div class="do-item">Document unusual query patterns in COE Knowledge Base (SharePoint)</div>
+                <div class="do-item">Document unusual query patterns in CGI COE Oracle Playbook (SharePoint)</div>
                 <div class="do-item">Pair new users with Ask EBS 'buddy' for first 2 weeks</div>
               </div>
             </div>
@@ -3468,9 +3502,6 @@ body{
     </div><!-- /slides-wrap p2p -->
     </div><!-- /doc-section p2p -->
 
-  </main>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <!-- OAC DOCUMENT — 20 SLIDES -->
     <div class="doc-section" id="doc-oac">
     <div class="slides-wrap">
@@ -4133,7 +4164,10 @@ body{
     </div><!-- /slides-wrap oac -->
     </div><!-- /doc-section oac -->
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  </main>
+</div><!-- /layout -->
+
+<script>
 // ── CURRENT DOC STATE ──
 let activeDoc = 'askebs';
 const docSlideCount = { askebs: 17, webadi: 19, p2p: 21, oac: 19 };
@@ -4236,5 +4270,25 @@ function onScroll(){
 window.addEventListener('scroll',onScroll,{passive:true});
 onScroll();
 </script>
+<!-- ████ SITE FOOTER ████ -->
+<footer class="site-footer">
+  <div class="site-footer-brand">CGI COE Oracle Playbook</div>
+  <nav class="site-footer-links">
+    <a class="site-footer-link" href="https://cgicoerepo.vercel.app/" target="_blank" rel="noopener">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      CGI Oracle Stack
+    </a>
+    <a class="site-footer-link" href="https://cgicoeexam.vercel.app/" target="_blank" rel="noopener">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      CGI Oracle Cert Lab
+    </a>
+    <a class="site-footer-link" href="https://cgicoesql.vercel.app/" target="_blank" rel="noopener">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      CGI Oracle SQL Arsenal
+    </a>
+  </nav>
+  <div class="site-footer-copy">CGI COE &nbsp;·&nbsp; Internal Reference Use Only</div>
+</footer>
+
 </body>
 </html>
